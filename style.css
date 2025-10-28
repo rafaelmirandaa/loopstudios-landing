@@ -2,7 +2,6 @@
     --fuenteParrafos : sans-serif;
     --FuenteHeading : 'Open Sans' sans-serif;
 
-    --primario: #;
     --blanco: #ffffff;
     --negro:#000000;
 }
@@ -76,12 +75,12 @@ img{
     padding-top: 5.5rem;
     gap: 50rem;
 }
-nav a{
+.navbar a{
     color: var(--blanco);
-    margin-left: 3rem;
+    margin-left:4rem;
     font-family: var(--FuenteHeading);
+    font-weight: bold;
 }
-
-nav a:hover{
+.navbar a:hover{
     color: purple;
-}
+}/*
