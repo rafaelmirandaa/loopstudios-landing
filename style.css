@@ -16,16 +16,15 @@ html {
 body{
     font-family: var(--fuenteParrafos);
     font-size: 1.6rem;
-    line-height: 2;
+    line-height: 1.4;
 }
 
 /**Globales**/
 .contenedor{
     max-width: 120rem;
-    width:100%;;
+    width:90%;
     margin: 0 auto;
 }
-
 a{
     text-decoration: none;
 }
@@ -61,108 +60,56 @@ img{
 /*Contenido*/
 .header{
     background-image: url(/images/desktop/image-hero.jpg);
-    background-size: cover;      /* Hace que la imagen cubra todo */
-    background-position: center; /* Centra la imagen */
+    background-size: cover;  
+    background-position: center center; 
     background-repeat: no-repeat;
     width: 100%;
     height: 90vh;
 }
-.menu{
-    display: flex;
-    flex-direction: row;
-    align-content: space-between;
-    align-items: center;
-    padding-top: 5.5rem;
-    gap: 45rem;
-}
-.navbar{
-    display: flex;
-    gap: 3rem;
-}
-.navbar a{
-    color: var(--blanco);
-    margin-left:4rem;
-    font-family: var(--FuenteHeading);
-    font-weight: bold;
-    text-decoration: none;
-}
-.navbar a:hover{
-    color: purple;
-}
 
 .mobile-menu{
     display: none;
-    cursor: pointer;
 }
 
-.header-title{
-    width: 50%;
-    margin-left: 18rem;
-    height: 90vh;
-}
-@media (max-width:768px){
-    .mobile-menu{
-        display: block;
-        width: 5rem;
-    }
-    .navbar{
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 8rem;
-        left: 0;
-        right: 0;
-        background-color: #111;
-        text-align: center;
-        padding: 2rem 0;
-    }
-}
-
-@media (max-width:800px){
-    .mobile-menu{
-        display: block;
-    }
-    .navbar{
-        display: none;
-    }
-}
-
-@media (max-width:1200px){
-    .menu{
-        gap: 40rem;
-    }
-}
-
-
-
-
-
-
-
-
-@media (max-width:575px){
-    body{
-        line-height: 1.4;
-    }
-    .header{
-        width: 100%;
-        height: 120vh;
-        background-position:bottom; 
-        background-size:cover;
-    }
-    .menu{
-        width: 90%;
-        gap:12rem;
-    }
-    .menu .logo{
-        width: 100%;
-        margin-top: 2rem;
-    }
-    .header-title{
+.menu{
     width: 90%;
-    background-color: red;
-    height: 50vh;
-    position: absolute;
+    height: 15rem;
+    margin-bottom:4rem;
+    margin-top: 0;
+    
 }
 
+
+@media(min-width:768px){    
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar{
+    display: block;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header-texto{
+   border: 1px solid var(--blanco);
+   width: 70rem;
+   height: 30rem;
+   margin-left: 29rem;
+   margin-bottom: 12rem;
+   padding:8rem;
+   align-items: flex-start;
+   justify-content: flex-start;
+   line-height:7rem;
+}
+
+.header-texto p{
+    text-align: left;
+    font-size: 8rem;
+    padding-left: 1.2rem;
+    color: red;
+    text-transform:uppercase;
+    text-align: justify;
+}
 }
