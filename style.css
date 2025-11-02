@@ -64,7 +64,7 @@ img{
     background-position: center center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 70rem;
+    height: 60rem;
 }
 
 .mobile-menu{
@@ -85,25 +85,68 @@ img{
     font-size: 1.8rem;
     color: var(--blanco);
 }
-.header-texto{
-    display: flex;
-    border: 1px solid var(--blanco);
-    width: 50%;
-    height: 20rem;
-    padding: 1rem 1rem;
-    margin-top: 15rem;
+.header-texto {
+  border: 2px solid var(--blanco);
+  width: fit-content;          
+  margin-left: 19rem;          
+  margin-top: 31rem;
+  padding: 3.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
-.header-texto p{
-    color: var(--blanco);
-    font-size: 7rem;
-    text-align: justify;
-    text-transform: uppercase;
+
+.header-texto p {
+  margin: 0;
+  font-size: 11rem;
+  color: beige;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 1;
+}
+
+.margin{
+    margin-bottom: 15rem;
 }
 .navbar{
     display: none;
     gap: 6rem;
 }
 
+@media (max-width: 767px) {
+  .header-texto {
+    border: 2px solid var(--blanco);
+    width: 90%;                 /* ocupa casi todo el ancho */
+    margin: 0 auto;             /* centra horizontalmente */
+    margin-top: 15rem;          /* separa del borde superior */
+    text-align: center;         /* centra el texto */
+    justify-content: center;    /* centra dentro del flex */
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .header-texto p {
+    font-size: 6rem;          /* texto más pequeño para móvil */
+    text-align: left;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .header-texto {
+    width: 50rem;
+    margin-left: 19rem;         /* vuelve a alinearse a la izquierda */
+    margin-top: 15rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .header-texto p {
+    font-size: 5rem;
+    text-align: justify;
+  }
+}
 
 @media(min-width:768px){    
     .menu{
@@ -118,20 +161,5 @@ img{
     }
     .mobile-menu{
         display: none;
-    }
-    .header-texto{
-        display: block;
-        border: 1px solid var(--blanco);
-        margin-top: 15rem;
-        width:54rem;
-        height: 20rem;
-        padding-left: 3rem;
-        line-height: 6rem;
-    }
-
-    .header-texto p{
-        color: var(--blanco);
-        font-size: 6rem;
-        text-transform: uppercase;
     }
 }
