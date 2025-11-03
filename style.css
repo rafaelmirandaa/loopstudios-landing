@@ -1,7 +1,7 @@
 :root{
     --fuenteParrafos : sans-serif;
     --FuenteHeading : 'Open Sans' sans-serif;
-
+    --fuenteTitulo : 'Montserrat', sans-serif;
     --blanco: #ffffff;
     --negro:#000000;
 }
@@ -117,20 +117,37 @@ img{
 .body-interactive{
     width: 100%;
     height: 70rem;
-    background-color:var(--blanco);
     padding-top: 10rem;
-    display: block;
+    position: relative;
+
 }
 .body-imagen{
     background-image: url(/images/mobile/image-interactive.jpg);
     background-size:initial;
     background-position: left center;
     background-repeat: no-repeat;
-    width: 50%;
+    width: 80%;
     height: 60rem;
 }
+.body-texto{
+    width: 40%;
+    height: 30rem;
+    background-color: #ffffff;
+    position: absolute;
+    right: 200px;
+    bottom: 7.5rem;
+    padding-left: 11rem;
+}
 
+.body-texto h1{
+    font-weight: 300;
+    font-family:var(--fuenteTitulo)
+}
 
+.body-texto p{
+    font-size: 13px;
+    color: gray;
+}
 
 
 
