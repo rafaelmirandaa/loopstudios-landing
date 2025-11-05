@@ -167,20 +167,113 @@ img{
     color: gray;
     text-align: center;
 }
-
+.creations {
+  padding: 4rem 2rem;
+  text-align: center;
+}
 .creations h1{
     font-family: var(--fuenteTitulo);
     font-weight: 300;
     font-size: 3.5rem;
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: 7rem;
 }
 
+.creations .cards div {
+  position: relative;
+}
+.creations .cards img {
+  width: 100%;
+  display: block;
 
+}
+/* Estilo del texto dentro de la imagen */
+.contenedor-imagen {
+  position: relative;
+  display: inline-block;
+}
 
+.contenedor-imagen img {
+  width: 100%;
+  display: block;
+}
 
+/* los span irán uno debajo del otro sobre la imagen */
+.contenedor-imagen span {
+  position: absolute;
+  left: 1.5rem;              /* separación del borde izquierdo */
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-transform: uppercase;          /* espacio entre líneas */
+}
 
+/* para que el texto se ubique en la parte inferior de la imagen */
+.contenedor-imagen span:nth-of-type(1) {
+  bottom: 3.5rem;            /* primera línea */
+}
 
+.contenedor-imagen span:nth-of-type(2) {
+  bottom: 1.5rem;            /* segunda línea (más abajo) */
+}
+
+/* ======== ESTILOS BASE ======== */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr; /* una columna en móvil */
+  gap: 4rem;
+}
+
+/* ======== CADA TARJETA ======== */
+.contenedor-imagen {
+  position: relative;
+  overflow: hidden;
+}
+
+.contenedor-imagen picture,
+.contenedor-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contenedor-imagen span {
+  position: absolute;
+  left: 2rem;
+  bottom: 3rem;
+  display: block;
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* ======== BOTÓN "SEE ALL" ======== */
+.boton-see {
+  margin-top: 0rem;
+}
+
+.boton-see p {
+  border: 1px solid black;
+  display: inline-block;
+  padding: 1rem 3rem;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton-see p:hover {
+  background-color: black;
+  color: white;
+}
+
+/* ======== VISTA ESCRITORIO ======== */
 @media (min-width: 768px) {/*tablet y superior*/
     .menu{
         display: flex;
@@ -221,4 +314,26 @@ img{
     .header-texto p span:nth-last-child(2)::after {
         content: " ";
     }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+        grid-template-rows: repeat(2, auto); /* 2 filas */
+        gap: 3rem;
+    }
+
+    .contenedor-imagen {
+        height: 350px; /* fija altura más estética */
+    }
+
+    .creations h1 {
+        font-size: 3.2rem;
+        text-align: left;
+    }
+
+    .boton-see {
+        position: absolute;
+        bottom: 89rem;
+        left: 80rem;
+    }
+
 }
