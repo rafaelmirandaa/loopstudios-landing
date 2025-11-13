@@ -59,7 +59,7 @@ img{
 }
 /*Contenido*/
 .header{
-    background-image: url(/images/desktop/image-hero.jpg);
+    background-image: url(images/desktop/image-hero.jpg);
     background-size:cover;
     background-position: center center;
     background-repeat: no-repeat;
