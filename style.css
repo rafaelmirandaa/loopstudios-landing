@@ -382,8 +382,9 @@ footer{
         height: 25rem;
         position: absolute;
         left:750px;
+        bottom: -430px;
         background-color: #ffffff;
-        padding: 20px;
+        padding: 20px 60px;
     }
     .body-texto h1{
         text-align: left;
